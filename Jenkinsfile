@@ -8,7 +8,7 @@ pipeline {
         stage('checkout') { 
 		agent any
             steps {
-                git 'https://github.com/Harishma1/devops.git' 
+                git 'https://github.com/Harishma1/devopsproject.git' 
             }
         }
 		
