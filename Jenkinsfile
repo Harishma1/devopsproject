@@ -5,7 +5,7 @@ pipeline {
 	}
 	agent none
     stages {
-        stage('checkout') { 
+        stage('checkout1') { 
 		agent any
             steps {
                 git 'https://github.com/Harishma1/devopsproject.git' 
