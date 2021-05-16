@@ -8,7 +8,7 @@ pipeline {
         stage('checkout1') { 
 		agent any
             steps {
-                git 'https://github.com/Harishma1/devopsproject.git' 
+                git poll: true, url: 'https://github.com/Harishma1/devopsproject.git' 
             }
         }
 		
