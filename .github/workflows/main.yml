@@ -33,11 +33,15 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Step 3 - maven build
-        run: mvn -B package --file pom.xml
+        run: |
+        mvn -B package --file pom.xml
+        mkdir staging && cp target/*.war staging 
         
-      - name: Step 4 - list current dir
-        run: ls -a
-        
-      - name: Step 5 - list target folder
-        run: cd target | ls -a
+      - name: Step 5 - listcurrent dir
+        run: ls -a 
+        uses: actions/upload-artifact@v2
+        with:
+        name: github-actions-artificat
+        path: staging
+
           
