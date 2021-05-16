@@ -7,8 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,11 +23,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Step 1 - checout code from github repo
-      uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       - name: Step 2 - set jdk 1.8
-         uses: actions/java@v1
+        uses: actions/java@v1
 
         
 
@@ -36,10 +35,10 @@ jobs:
       - name: Step 3 - maven build
         run: mvn -B package --file pom.xml
         
-         - name: Step 4 - list current dir
+      - name: Step 4 - list current dir
         run: ls -a
         
-         - name: Step 5 - list target folder
+      - name: Step 5 - list target folder
         run: |
         cd target
         ls -a
