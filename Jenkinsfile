@@ -33,6 +33,7 @@ pipeline {
             }
         }
 	stage('package') { 
+		agent any
             steps {
                 sh 'mvn package'
                   }
