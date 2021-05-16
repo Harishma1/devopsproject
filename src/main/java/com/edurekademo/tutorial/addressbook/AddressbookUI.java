@@ -95,7 +95,7 @@ public class AddressbookUI extends UI {
      * components with a SplitPanel.
      *
      * In addition to programmatically building layout in Java, you may also
-     * choose to setup layout declaratively with Vaadin Designer, CSS and HTML.
+     * choose to setup layout declaratively with Vaadin Designer, CSS and HTML....
      */
     private void buildLayout() {
         HorizontalLayout actions = new HorizontalLayout(filter, newContact);
