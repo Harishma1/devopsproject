@@ -39,7 +39,5 @@ jobs:
         run: ls -a
         
       - name: Step 5 - list target folder
-        run: |
-        cd target
-        ls -a
+        run: cd target | ls -a
           
