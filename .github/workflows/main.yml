@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Step 2 - set jdk 1.8
-        uses: actions/java@v1
+        uses: actions/setup-java@v1
 
         
 
